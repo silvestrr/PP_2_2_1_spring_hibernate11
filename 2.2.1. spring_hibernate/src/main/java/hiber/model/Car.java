@@ -1,5 +1,7 @@
 package hiber.model;
 
+import org.hibernate.annotations.Table;
+
 import javax.persistence.*;
 @Entity
 @Table(name = "car")
