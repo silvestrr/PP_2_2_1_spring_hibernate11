@@ -27,8 +27,8 @@ public class UserServiceImp implements UserService {
     }
 
     @Transactional(readOnly = true)
-    public User getUserByModel(String model, int series) {
-        return userDao.getUserByModel(model, series);
+    public User getUserByModelAndSeries(String model, int series) {
+        return userDao.getUserByModelAndSeries(model, series);
     }
 
 }
