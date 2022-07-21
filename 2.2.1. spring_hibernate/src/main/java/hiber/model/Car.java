@@ -33,19 +33,6 @@ public class Car {
         this.series = series;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Car car = (Car) o;
-        return series == car.series && Objects.equals(id, car.id) && Objects.equals(model, car.model) && Objects.equals(user, car.user);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, model, series, user);
-    }
-
     public Long getId() {
         return id;
     }
@@ -73,5 +60,18 @@ public class Car {
     @Override
     public String toString() {
         return "model = " + this.getModel() + ", series = " + this.getSeries();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return series == car.series && Objects.equals(id, car.id) && Objects.equals(model, car.model) && Objects.equals(user, car.user);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, model, series, user);
     }
 }
