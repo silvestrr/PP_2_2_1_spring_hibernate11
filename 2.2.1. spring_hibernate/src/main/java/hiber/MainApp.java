@@ -21,7 +21,7 @@ public class MainApp {
         userService.addUser(new User("User4", "Lastname4", "user4@mail.ru", new Car("car4", 4)));
 
 
-        System.out.println(userService.getUserByModelAndSeries("car2", 2));
+        System.out.println(userService.getUserByModelAndSeries("car3", 3));
 
         context.close();
     }
